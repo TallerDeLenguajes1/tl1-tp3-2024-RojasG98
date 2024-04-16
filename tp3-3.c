@@ -13,12 +13,12 @@ int main(){
         printf("Ingrese su nombre: ");
         gets(buff);
         *(nombres+i) = (char *) malloc((strlen(buff)+1)*sizeof(char));
-        strcpy(nombres[i],buff);
+        strcpy(*(nombres+i),buff);
     }
     free(buff);
     for (int i = 0; i < TAMA; i++)
     {
-        printf("Nombre %d: %s\n",i+1,nombres[i]);
+        printf("Nombre %d: %s\n",i+1,*(nombres+i));
     }
     free(nombres);
     
